@@ -6,9 +6,9 @@ type FormPropsType = {
 
 const Form = (props: FormPropsType) => {
   return(
-    <form>
+    <form onSubmit = {props.getWeather}>
       <input type = "text" name = "city" placeholder = "都市名" onChange = {e => props.setCity(e.target.value)}/>
-      <button type = "submit" onClick = {props.getWeather}>Get Weather</button>
+      <button type = "submit">Get Weather</button>
     </form>
   );
 };
